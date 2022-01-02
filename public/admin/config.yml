@@ -11,6 +11,7 @@ collections:
     folder: "public/data/_articles"
     create: true
     slug: "{{slug}}"
+    format: "json"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
