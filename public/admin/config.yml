@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "article"
+    label: "Article"
+    folder: "_articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Optional Image 1", name: "opImage1", widget: "image", required: false}
+      - {label: "Optional Image 2", name: "opImage2", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
