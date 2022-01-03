@@ -11,11 +11,12 @@ collections:
     folder: "public/data/_articles"
     create: true
     identifier_field: "title"
-    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "{{fields.slug}}"
     format: "json"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string", pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'A slug can have no spaces or special characters']}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
