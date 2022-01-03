@@ -10,7 +10,8 @@ collections:
     label: "Article"
     folder: "public/data/_articles"
     create: true
-    slug: "{{slug}}"
+    identifier_field: "title"
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     format: "json"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
