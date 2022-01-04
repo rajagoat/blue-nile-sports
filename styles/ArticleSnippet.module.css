@@ -2,9 +2,16 @@
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 50%;
     margin-left: 2%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    border-left: 6px solid #023496;
+}
+
+.box:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .mediaContent {

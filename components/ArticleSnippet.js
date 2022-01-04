@@ -15,7 +15,7 @@ const ArticleSnippet = ({ article: { title, author, dateFormatted, body, thumbna
                 <p className={styles.mediaBody}>{truncate(body, 10)}</p>
             </div>
             <>
-                <Image className={styles.image} src={thumbnail} width={110} height={110} layout='intrinsic'/>
+                <Image className={styles.image} src={thumbnail} width={200} height={110} layout='intrinsic'/>
             </>
         </article>
     );
