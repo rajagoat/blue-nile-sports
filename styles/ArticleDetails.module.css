@@ -59,3 +59,9 @@
 .content img {
     width: 100%;
 }
+
+.content blockquote {
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+}

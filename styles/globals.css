@@ -5,6 +5,12 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 nav > a, footer {
   color: #fff;
   text-decoration: none;
@@ -29,4 +35,5 @@ footer {
   justify-content: space-between;
   padding: 0px 10px 0px 10px;
   background: #00074B;
+  margin-top: auto;
 }
