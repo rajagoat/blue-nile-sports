@@ -20,9 +20,11 @@ export const getStaticProps = async (context) => {
 const Details = ({ article: { thumbnail, title, author, dateFormatted, bodyHtml } }) => {
     return (
         <div className={styles.page}>
-            <div className={styles.imageContainer}>
-                <Image className={styles.image} src={thumbnail} layout='fill' priority />
-            </div>
+            {thumbnail &&
+                <div className={styles.imageContainer}>
+                    <Image className={styles.image} src={thumbnail} layout='fill' priority />
+                </div>
+            }
             <div className={styles.details}>
                 <div className={styles.headlineContainer}>
                     <h1 className={styles.title}>{title}</h1>

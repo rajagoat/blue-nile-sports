@@ -8,7 +8,7 @@ const ArticleSnippet = ({ article: { slug, title, author, dateFormatted, body, t
     }
 
     return (
-        <Link href={`/articles/${slug}`}>
+        <Link href={`/articles/${slug}`} passHref>
             <article className={styles.box}>
                 <div className={styles.mediaContent}>
                     <h2 className={styles.mediaTitle}>{title}</h2>
@@ -17,7 +17,9 @@ const ArticleSnippet = ({ article: { slug, title, author, dateFormatted, body, t
                     <p className={styles.mediaBody}>{truncate(body, 10)}</p>
                 </div>
                 <>
-                    <Image className={styles.image} src={thumbnail} width={200} height={110} layout='intrinsic' />
+                    {thumbnail &&
+                        <Image className={styles.image} src={thumbnail} width={200} height={110} layout='intrinsic' />
+                    }
                 </>
             </article>
         </Link>
