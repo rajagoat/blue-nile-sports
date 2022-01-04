@@ -7,3 +7,15 @@ const PlayerProfiles = () => {
 }
  
 export default PlayerProfiles;
+
+/* 
+    Statistics:
+    Team
+    M - Matches
+    G - Goals
+    Position
+    Date of Birth
+    Height
+    Image
+    Name
+*/
