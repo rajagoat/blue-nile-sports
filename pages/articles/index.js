@@ -1,26 +1,14 @@
+import ArticleSnippet from '../../components/ArticleSnippet';
 import articles from '../../public/data/articles.json'
+import styles from '../../styles/Articles.module.css'
 
 const Articles = () => {
-    console.log(articles);
-    const truncate = (str, no_words) => {
-        return str.split(" ").splice(0, no_words).join(" ") + "...";
-    }
-
     return (
         <div>
-            <h1>Latest in Football</h1>
-            {articles && articles.map(article => {
-                <div key={article.slug} className="box">
-                    <article className="media">
-                        <div className="media-content">
-                            <h2 className="media-title">{article.title}</h2>
-                            <p className="media-author">{article.author}</p>
-                            <p className="media-date">{article.dateFormatted}</p>
-                            <p className="media-body">{truncate(article.body)}</p>
-                        </div>
-                    </article>
-                </div>
-            })}
+            <h1 className={styles.title}>- Latest in Football -</h1>
+            {articles && articles.map(article =>
+                <ArticleSnippet article={article} key={article.slug} />
+            )}
         </div>
     );
 }

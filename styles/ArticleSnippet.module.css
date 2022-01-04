@@ -1,0 +1,28 @@
+.box {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 2%;
+    margin-bottom: 10px;
+}
+
+.mediaContent {
+    margin-left: 20px;
+}
+
+.mediaTitle {
+    margin-bottom: 10px;
+}
+
+.mediaAuthor, .mediaDate {
+    font-weight: 200;
+}
+
+.mediaDate {
+    font-style: italic;
+}
+
+.image {
+    object-fit: cover;
+}
