@@ -32,7 +32,8 @@ nav a {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   padding: 0px 10px 0px 10px;
   background: #00074B;
   margin-top: auto;

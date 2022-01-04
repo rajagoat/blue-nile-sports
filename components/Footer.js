@@ -1,10 +1,12 @@
 const Footer = () => {
+    const date = new Date().getFullYear();
+
     return (
         <footer>
             <div className="logo">
-                <p>Blue Nile Sports</p>
+                <p>Blue Nile Sports | </p>
             </div>
-            <p>Copyright 2021</p>
+            <p> | Copyright &copy; {date}</p>
         </footer>
     );
 }
