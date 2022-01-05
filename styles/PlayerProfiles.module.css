@@ -3,3 +3,40 @@
     font-style: italic;
     margin-left: 10px;
 }
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.gridItem {
+    display: grid;
+}
+
+.gridItem > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+.image {
+    object-fit: cover;
+    z-index: 0;
+}
+
+.fadeBox {
+    width: 381px;
+    height: 266px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    z-index: 1;
+    align-self: flex-end;
+}
+
+.name {
+    color: #fff;
+    padding-left: 20px;
+    font-size: 24px;
+    z-index: 2;
+    align-self: flex-end;
+}
