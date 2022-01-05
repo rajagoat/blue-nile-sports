@@ -4,6 +4,7 @@ import styles from '../styles/ArticleSnippet.module.css'
 
 const ArticleSnippet = ({ article: { slug, title, author, dateFormatted, body, thumbnail } }) => {
     const truncate = (str, no_words) => {
+        str = str.replace(/(!\[((.*?)\]))|(\(((.*?)\)))/gm, "");
         return str.split(" ").splice(0, no_words).join(" ").replace(/[^a-zA-Z0-9.?! ]/gm, "") + "...";
     }
 
