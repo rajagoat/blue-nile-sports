@@ -21,3 +21,18 @@ collections:
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "player-profiles"
+    label: "Player Profiles"
+    folder: "public/data/_player_profiles"
+    create: true
+    identifier_field: "name"
+    format: "json"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Date of Birth", name: "dob", widget: "datetime"}
+      - {label: "Height", name: "height", widget: "string"}
+      - {label: "Team", name: "team", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Matches Played", name: "matches", widget: "number"}
+      - {label: "Goals Scored", name: "goals", widget: "number"}

@@ -11,8 +11,8 @@ export default PlayerProfiles;
 /* 
     Statistics:
     Team
-    M - Matches
-    G - Goals
+    Matches
+    Goals
     Position
     Date of Birth
     Height
