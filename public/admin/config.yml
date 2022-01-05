@@ -29,6 +29,7 @@ collections:
     format: "json"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden"}
+      - {label: "Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Date of Birth", name: "dob", widget: "datetime"}
       - {label: "Height", name: "height", widget: "string"}
