@@ -34,6 +34,9 @@ function processFiles({ inputDirectory, outputFile }) {
     if (jsonData.date) {
       jsonData.dateFormatted = (new Date(jsonData.date)).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
     }
+    if (jsonData.dob) {
+      jsonData.dobFormatted = (new Date(jsonData.dob)).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+    }
 
     // write transformations back to original file
     writeFileSync(filePath, JSON.stringify(jsonData, null, 2))
