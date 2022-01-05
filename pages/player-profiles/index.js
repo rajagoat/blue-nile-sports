@@ -1,7 +1,9 @@
+import styles from '../../styles/PlayerProfiles.module.css'
+
 const PlayerProfiles = () => {
     return (
         <div>
-            <h1>Player Profiles</h1>
+            <h1 className={styles.title}>- Football Player Profiles -</h1>
         </div>
     );
 }
