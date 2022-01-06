@@ -18,7 +18,11 @@
 .gridItem > * {
     grid-column-start: 1;
     grid-row-start: 1;
-  }
+}
+
+.gridItem:hover {
+    cursor: pointer;
+}
 
 .image {
     object-fit: cover;
