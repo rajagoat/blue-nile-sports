@@ -44,12 +44,12 @@ const Navbar = () => {
                         <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} />
                     </div>
                 </Link>
-                <Link href={"/about"} passHref>
+                {/* <Link href={"/about"} passHref>
                     <div className="down-arrow">
                         <a>About</a>
                         <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} />
                     </div>
-                </Link>
+                </Link> */}
             </div>
             <div className="social-media">
                 <a target="_blank" href='https://www.instagram.com/bluenilesports/?hl=en' rel="noopener noreferrer">
