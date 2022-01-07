@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="logo">
-                <p>Blue Nile Sports | </p>
+                <p>Blue Nile Sport | </p>
             </div>
             <p> | Copyright &copy; {date}</p>
         </footer>

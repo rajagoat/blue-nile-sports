@@ -1,17 +1,64 @@
+import Image from "next/image";
 import Link from "next/link";
+import logo from '../public/icons/logo.svg'
+import downArrowIcon from '../public/icons/down_arrow.svg'
+import instagramIcon from '../public/icons/instagram.svg'
+import twitterIcon from '../public/icons/twitter.svg'
 
 const Navbar = () => {
+    const logoSize = {height: 100, width: 100};
+    const downArrowSize = {height: 20, width: 12};
+    const socialMediaSize = {height: 30, width: 30};
+
     return (
         <nav>
-            <div className="logo">
-                <h1>Blue Nile Sports</h1>
+            <div className="sitemap">
+                <div className="logo">
+                    <Link href={'/'}>
+                        <div>
+                            <Image src={logo} height={logoSize.height} width={logoSize.width} priority />
+                        </div>
+                    </Link>
+                </div>
+                <Link href={'/'}>
+                    <div className="down-arrow" >
+                        <a>Home</a>
+                        <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} />
+                    </div>
+                </Link>
+                <Link href={"/articles"}>
+                    <div className="down-arrow">
+                        <a>Articles</a>
+                        <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} />
+                    </div>
+                </Link>
+                <Link href={"/player-profiles"}>
+                    <div className="down-arrow">
+                        <a>Player Profiles</a>
+                        <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} />
+                    </div>
+                </Link>
+                <Link href={"/schedule"}>
+                    <div className="down-arrow">
+                        <a>Schedule</a>
+                        <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} />
+                    </div>
+                </Link>
             </div>
-            <Link href="/"><a>Homepage</a></Link>
-            <Link href="/articles"><a>Articles</a></Link>
-            <Link href="/player-profiles"><a>Player Profiles</a></Link>
-            <Link href="/schedule"><a>Schedule</a></Link>
+            <div className="social-media">
+                <Link href={'https://www.instagram.com/bluenilesports/?hl=en'}>
+                    <div>
+                        <Image src={instagramIcon} height={socialMediaSize.height} width={socialMediaSize.width} />
+                    </div>
+                </Link>
+                <Link href={'https://twitter.com/BlueNileSports'}>
+                    <div>
+                        <Image src={twitterIcon} height={socialMediaSize.height} width={socialMediaSize.width} />
+                    </div>
+                </Link>
+            </div>
         </nav>
     );
 }
- 
+
 export default Navbar;
