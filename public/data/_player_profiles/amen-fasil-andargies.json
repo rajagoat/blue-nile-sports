@@ -1,11 +1,11 @@
 {
-  "dob": "2022-01-05T08:28:15.609Z",
-  "name": "Amen Fasil Andargies",
-  "height": "20 cm",
-  "team": "Royal Madrid",
+  "goals": 2000000,
+  "dobFormatted": "Wednesday, January 5, 2022",
+  "height": "7ft2in",
   "position": "Forward",
-  "matches": 3,
-  "goals": 0,
+  "name": "Amen Fasil Andargies",
   "thumbnail": "/images/uploads/man-thinking.jpg",
-  "dobFormatted": "Wednesday, January 5, 2022"
+  "matches": 3,
+  "dob": "2022-01-05T08:28:15.609Z",
+  "team": "Royal Madrid"
 }
