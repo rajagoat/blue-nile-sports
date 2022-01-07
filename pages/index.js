@@ -18,8 +18,8 @@ export default function Home({ imageArticles }) {
     <div className={styles.page}>
       <div className={styles.slider}>
         {imageArticles && imageArticles.map(article =>
-          <Link href={`/articles/${article.slug}`} passHref>
-            <div className={styles.featuredContainer} key={article.slug}>
+          <Link href={`/articles/${article.slug}`} passHref key={article.slug}>
+            <div className={styles.featuredContainer}>
               <Image className={styles.featuredImage} src={article.thumbnail} layout='fill' priority />
               <div className={styles.fadeBox} />
               <div className={styles.featuredText}>
