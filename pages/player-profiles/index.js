@@ -23,7 +23,7 @@ export default PlayerProfiles;
 
 /* 
     Statistics:
-    Team
+    Team --> Club
     Matches
     Goals
     Position
@@ -31,4 +31,5 @@ export default PlayerProfiles;
     Height
     Image
     Name
+    Bio
 */

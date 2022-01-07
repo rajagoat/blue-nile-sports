@@ -1,5 +1,8 @@
-.page {
+.page, .moreDetails {
     background-color: #EDEDED;
+}
+
+.page {
     display: grid;
     place-items: center;
 }
@@ -66,4 +69,12 @@
     font-style: italic;
     position: relative;
     top: -20px;
+}
+
+.header {
+    font-style: italic;
+}
+
+.header, .articleContainer {
+    margin-left: 50px;
 }
