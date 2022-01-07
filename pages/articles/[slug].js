@@ -25,7 +25,7 @@ const Details = ({ article: { thumbnail, title, author, dateFormatted, bodyHtml 
             <div className={styles.page}>
                 {thumbnail &&
                     <div className={styles.imageContainer}>
-                        <Image className={styles.image} src={thumbnail} layout='fill' priority />
+                        <Image className={styles.image} src={thumbnail} alt='' layout='fill' priority />
                     </div>
                 }
                 <div className={styles.details}>

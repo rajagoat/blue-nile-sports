@@ -36,7 +36,7 @@ const Schedule = ({ matches: { success, data: { fixtures } } }) => {
                 {fixtures.map(fixture =>
                     <div className={styles.fixture} key={fixture.id}>
                         <div className={styles.home}>
-                            <Image src={homeBackground} width={250} height={200} layout='fixed' />
+                            <Image src={homeBackground} width={250} height={200} alt='' layout='fixed' />
                             <h2>{fixture.home_name}</h2>
                         </div>
                         <div className={styles.matchDetails}>
@@ -49,7 +49,7 @@ const Schedule = ({ matches: { success, data: { fixtures } } }) => {
                             }
                         </div>
                         <div className={styles.away}>
-                            <Image src={awayBackground} width={250} height={210} layout='fixed' />
+                            <Image src={awayBackground} width={250} height={210} alt='' layout='fixed' />
                             <h2>{fixture.away_name}</h2>
                         </div>
                     </div>

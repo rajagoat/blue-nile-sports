@@ -20,7 +20,7 @@ export default function Home({ imageArticles }) {
         {imageArticles && imageArticles.map(article =>
           <Link href={`/articles/${article.slug}`} passHref key={article.slug}>
             <div className={styles.featuredContainer}>
-              <Image className={styles.featuredImage} src={article.thumbnail} layout='fill' priority />
+              <Image className={styles.featuredImage} src={article.thumbnail} alt='' layout='fill' priority />
               <div className={styles.fadeBox} />
               <div className={styles.featuredText}>
                 <h1 className={styles.featuredTitle}>{article.title}</h1>

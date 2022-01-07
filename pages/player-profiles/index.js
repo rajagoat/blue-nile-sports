@@ -9,7 +9,7 @@ const PlayerProfiles = () => {
             <div className={styles.gridContainer}>
                 {playerProfiles && playerProfiles.map(profile =>
                     <div className={styles.gridItem} key={profile.name} onClick={() => setShowModal(true)}>
-                        <Image className={styles.image} src={profile.thumbnail} layout='fill' objectFit='cover' />
+                        <Image className={styles.image} src={profile.thumbnail} alt='' layout='fill' objectFit='cover' />
                         <div className={styles.fadeBox} />
                         <h3 className={styles.name}>{profile.name}</h3>
                     </div>
