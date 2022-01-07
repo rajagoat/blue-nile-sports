@@ -18,8 +18,11 @@ export const getStaticProps = async () => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     data1.data.fixtures.map(fixture => {
         let info = fixture.date.split('-');
+        let time = fixture.time.split(':');
         let newDate = `${months[Number(info[1]) - 1]} ${info[2]} ${info[0]}`;
-        fixture.date = newDate
+        let newTime = `${Number(time[0]) - 5}:${time[1]}:${time[2]}`;
+        fixture.date = newDate;
+        fixture.time = newTime;
     })
 
     return {
@@ -41,7 +44,7 @@ const Schedule = ({ matches: { success, data: { fixtures } } }) => {
                         </div>
                         <div className={styles.matchDetails}>
                             <h2>{fixture.date}</h2>
-                            <h3>{fixture.time}</h3>
+                            <h3>{`${fixture.time} EST`}</h3>
                             {fixture.location ?
                                 <p>{fixture.location}</p>
                                 :

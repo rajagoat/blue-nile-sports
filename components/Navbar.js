@@ -23,25 +23,25 @@ const Navbar = () => {
                 <Link href={'/'} passHref>
                     <div className="down-arrow" >
                         <a>Home</a>
-                        <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} />
+                        {/* <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} /> */}
                     </div>
                 </Link>
                 <Link href={"/articles"} passHref>
                     <div className="down-arrow">
                         <a>Articles</a>
-                        <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} />
+                        {/* <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} /> */}
                     </div>
                 </Link>
-                <Link href={"/player-profiles"} passHref>
+                {/* <Link href={"/player-profiles"} passHref>
                     <div className="down-arrow">
                         <a>Player Profiles</a>
                         <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} />
                     </div>
-                </Link>
+                </Link> */}
                 <Link href={"/schedule"} passHref>
                     <div className="down-arrow">
                         <a>Schedule</a>
-                        <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} />
+                        {/* <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} /> */}
                     </div>
                 </Link>
                 {/* <Link href={"/about"} passHref>
