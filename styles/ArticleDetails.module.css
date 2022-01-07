@@ -28,7 +28,7 @@
     border-radius: 5px;
     position: sticky;
     top: 500px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .headlineContainer {
@@ -77,4 +77,8 @@
 
 .header, .articleContainer {
     margin-left: 50px;
+}
+
+.articleContainer {
+    margin-bottom: 50px;
 }
