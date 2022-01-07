@@ -31,11 +31,17 @@ export default function Home({ imageArticles }) {
         )}
       </div>
       <h1 className={styles.header}>- Latest -</h1>
-      <div className={styles.articleContainer}>
-        {articles && articles.map(article =>
-          <ArticleSnippet article={article} key={article.slug}/>  
-        )}
+      <div className={styles.flexContainer}>
+        <div className={styles.articleContainer}>
+          {articles && articles.map(article =>
+            <ArticleSnippet article={article} key={article.slug}/>  
+          )}
+        </div>
+        <div className={styles.timelineWrapper}>
+          <a class="twitter-timeline" data-width="250" data-height="400" data-theme="dark" href="https://twitter.com/BlueNileSports">Reload to view</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
       </div>
+      
     </div>
   )
 }

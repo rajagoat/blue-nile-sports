@@ -1,0 +1,46 @@
+.body{
+  padding-top: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: flex-end;
+  background-color: #00074B;
+  height: 12px;
+}
+
+.close{
+    text-decoration: none;
+    position: relative;
+    color: #00074B;
+
+    font-size: 30px;
+
+    margin-top: 0px;
+    margin-right: 3px;
+}
+
+.modal{
+  background: white;
+  max-width: 500px;
+  width: 80vw;
+  z-index: 1000;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: black;
+}
+
+.text{
+    padding: 16px;
+}
