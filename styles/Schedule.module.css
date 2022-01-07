@@ -1,0 +1,48 @@
+.container {
+    margin: 0 100px;
+}
+
+.fixture {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #023496;
+}
+
+.home, .away {
+    display: grid;
+    align-items: center;
+}
+
+.home > *, .away > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.home h2, .away h2 {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-45deg);
+}
+
+.home h2 {
+    margin-bottom: 26px;
+    margin-left: 58px;
+}
+
+.away h2 {
+    margin-bottom: 70px;
+}
+
+.matchDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.matchDetails > * {
+    margin: 0 0 15px;
+}
