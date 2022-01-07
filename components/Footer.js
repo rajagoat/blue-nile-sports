@@ -3,7 +3,7 @@ const Footer = () => {
 
     return (
         <footer>
-            <div className="logo">
+            <div >
                 <p>Blue Nile Sport | </p>
             </div>
             <p> | Copyright &copy; {date}</p>
