@@ -4,5 +4,7 @@
   "title": "aefeadfdsad",
   "slug": "aefeadfdsad",
   "body": "asdsadad\n\n![](/images/uploads/elmo.jpg)\n\nadad",
-  "author": "awsdadas"
+  "author": "awsdadas",
+  "bodyHtml": "<p>asdsadad</p>\n<p><img src=\"/images/uploads/elmo.jpg\" alt=\"\"></p>\n<p>adad</p>\n",
+  "dateFormatted": "Thursday, January 6, 2022"
 }
