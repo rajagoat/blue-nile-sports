@@ -6,9 +6,9 @@ import instagramIcon from '../public/icons/instagram.svg'
 import twitterIcon from '../public/icons/twitter.svg'
 
 const Navbar = () => {
-    const logoSize = {height: 100, width: 100};
-    const downArrowSize = {height: 20, width: 12};
-    const socialMediaSize = {height: 30, width: 30};
+    const logoSize = { height: 100, width: 100 };
+    const downArrowSize = { height: 20, width: 12 };
+    const socialMediaSize = { height: 30, width: 30 };
 
     return (
         <nav>
@@ -44,18 +44,24 @@ const Navbar = () => {
                         <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} />
                     </div>
                 </Link>
+                <Link href={"/about"}>
+                    <div className="down-arrow">
+                        <a>About</a>
+                        <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} />
+                    </div>
+                </Link>
             </div>
             <div className="social-media">
-                <Link href={'https://www.instagram.com/bluenilesports/?hl=en'}>
+                <a target="_blank" href='https://www.instagram.com/bluenilesports/?hl=en' rel="noopener noreferrer">
                     <div>
                         <Image src={instagramIcon} height={socialMediaSize.height} width={socialMediaSize.width} />
                     </div>
-                </Link>
-                <Link href={'https://twitter.com/BlueNileSports'}>
+                </a>
+                <a target="_blank" href='https://twitter.com/BlueNileSports' rel="noopener noreferrer">
                     <div>
                         <Image src={twitterIcon} height={socialMediaSize.height} width={socialMediaSize.width} />
                     </div>
-                </Link>
+                </a>
             </div>
         </nav>
     );

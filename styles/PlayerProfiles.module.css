@@ -6,13 +6,16 @@
 
 .gridContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
 }
 
 .gridItem {
     display: grid;
+    position: relative;
+    width: 250px;
+    height: 350px;
 }
 
 .gridItem > * {
@@ -30,7 +33,7 @@
 }
 
 .fadeBox {
-    width: 381px;
+    width: 250px;
     height: 266px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     z-index: 1;

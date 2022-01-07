@@ -8,8 +8,8 @@ const PlayerProfiles = () => {
             <h1 className={styles.title}>- Football Player Profiles -</h1>
             <div className={styles.gridContainer}>
                 {playerProfiles && playerProfiles.map(profile =>
-                    <div className={styles.gridItem} key={profile.name}>
-                        <Image className={styles.image} src={profile.thumbnail} width={381} height={600} layout='intrinsic' />
+                    <div className={styles.gridItem} key={profile.name} onClick={() => setShowModal(true)}>
+                        <Image className={styles.image} src={profile.thumbnail} layout='fill' objectFit='cover' />
                         <div className={styles.fadeBox} />
                         <h3 className={styles.name}>{profile.name}</h3>
                     </div>
