@@ -1,13 +1,41 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import articles from '../public/data/articles.json'
+import Link from 'next/link'
+import ArticleSnippet from '../components/ArticleSnippet'
 
-export default function Home() {
+export const getStaticProps = async () => {
+  return {
+    props: {
+      imageArticles: articles.filter(article => article.thumbnail).slice(0, 3)
+    }
+  }
+}
+
+export default function Home({ imageArticles }) {
   return (
-    <div>
-      <h1>Homepage</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima mollitia optio, nihil laudantium explicabo animi sapiente. Sunt a error voluptates accusantium quis explicabo quod recusandae accusamus. Quisquam vero velit perferendis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo at doloribus dignissimos adipisci est repellat quia et officiis? Repudiandae minima accusantium pariatur commodi quos dolorum veniam aperiam sit ipsa?</p>
+    <div className={styles.page}>
+      <div className={styles.slider}>
+        {imageArticles && imageArticles.map(article =>
+          <Link href={`/articles/${article.slug}`} passHref>
+            <div className={styles.featuredContainer} key={article.slug}>
+              <Image className={styles.featuredImage} src={article.thumbnail} layout='fill' priority />
+              <div className={styles.fadeBox} />
+              <div className={styles.featuredText}>
+                <h1 className={styles.featuredTitle}>{article.title}</h1>
+                <p>Read More {'>'}{'>'}{'>'}</p>
+              </div>
+            </div>
+          </Link>
+        )}
+      </div>
+      <h1 className={styles.header}>- Latest -</h1>
+      <div className={styles.articleContainer}>
+        {articles && articles.map(article =>
+          <ArticleSnippet article={article} key={article.slug}/>  
+        )}
+      </div>
     </div>
   )
 }
