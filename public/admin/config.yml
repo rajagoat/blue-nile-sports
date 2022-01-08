@@ -37,3 +37,10 @@ collections:
       - {label: "Position", name: "position", widget: "string"}
       - {label: "Matches Played", name: "matches", widget: "number"}
       - {label: "Goals Scored", name: "goals", widget: "number"}
+  - name: "about"
+    label: "About Page"
+    folder: "public/data/"
+    create: false
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
