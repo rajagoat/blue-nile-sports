@@ -38,7 +38,7 @@ export default function Home({ imageArticles }) {
           )}
         </div>
         <div className={styles.timelineWrapper}>
-          <a class="twitter-timeline" data-width="250" data-height="400" data-theme="dark" href="https://twitter.com/BlueNileSports">Reload to view</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a className="twitter-timeline" data-width="250" data-height="400" data-theme="dark" href="https://twitter.com/BlueNileSports">Reload to view</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
       
