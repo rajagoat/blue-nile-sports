@@ -92,12 +92,21 @@
 .header {
   font-style: italic;
   margin-top: 50px;
+  margin-left: 16px;
 }
 
-.header, .articleContainer {
-  margin-left: 20px;
-}
 
 .articleContainer {
   margin-bottom: 50px;
+}
+
+.timelineWrapper{
+  margin-left: 16px;
+}
+
+.flexContainer{
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: center;
 }

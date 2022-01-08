@@ -6,9 +6,9 @@ import instagramIcon from '../public/icons/instagram.svg'
 import twitterIcon from '../public/icons/twitter.svg'
 
 const Navbar = () => {
-    const logoSize = { height: 100, width: 100 };
+    const logoSize = { height: 50, width: 50 };
     const downArrowSize = { height: 20, width: 12 };
-    const socialMediaSize = { height: 30, width: 30 };
+    const socialMediaSize = { height: 20, width: 20 };
 
     return (
         <nav>
@@ -21,35 +21,34 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <Link href={'/'} passHref>
-                    <div className="down-arrow" >
-                        <a>Home</a>
+                    <div className="down-arrow" style={{color:"white"}} >
+                        <p>Home</p>
                         {/* <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} /> */}
                     </div>
                 </Link>
                 <Link href={"/articles"} passHref>
-                    <div className="down-arrow">
-                        <a>Articles</a>
+                    <div className="down-arrow" style={{color:"white"}} >
+                        <p>Articles</p>
                         {/* <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} /> */}
                     </div>
                 </Link>
-                {/* <Link href={"/player-profiles"} passHref>
-                    <div className="down-arrow">
-                        <a>Player Profiles</a>
-                        <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} />
+                <Link href={"/player-profiles"} passHref>
+                    <div className="down-arrow"  style={{color:"white"}}>
+                        <p>Player Profiles</p>
+                        {/* <Image src={downArrowIcon} height={downArrowSize.height} width={downArrowSize.width} /> */}
                     </div>
-                </Link> */}
+                </Link>
                 <Link href={"/schedule"} passHref>
-                    <div className="down-arrow">
-                        <a>Schedule</a>
+                    <div className="down-arrow" style={{color:"white"}} >
+                        <p>Schedule</p>
                         {/* <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} /> */}
                     </div>
                 </Link>
-                {/* <Link href={"/about"} passHref>
-                    <div className="down-arrow">
-                        <a>About</a>
-                        <Image src={downArrowIcon} alt="" height={downArrowSize.height} width={downArrowSize.width} />
+                <Link href={"/about"} passHref>
+                    <div className="down-arrow" style={{color:"white"}} >
+                        <p>About</p>
                     </div>
-                </Link> */}
+                </Link>
             </div>
             <div className="social-media">
                 <a target="_blank" href='https://www.instagram.com/bluenilesports/?hl=en' rel="noopener noreferrer">
