@@ -11,37 +11,32 @@ body {
   min-height: 100vh;
 }
 
-nav a, footer {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
+.navigate{
+  background: linear-gradient(268.88deg, rgba(0, 73, 219, 0.91) 9.25%, #023496 76.4%);
 }
 
-nav {
-  background: linear-gradient(268.88deg, rgba(0, 73, 219, 0.91) 9.25%, #023496 76.4%);
-  margin: 0;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 10px solid #00074B;
+.logo{
+  background-color: black;
 }
+
+
+
+.navigate-item{
+  color: white;
+  text-decoration: none;
+
+  margin: 0 12px;
+}
+
 
 .sitemap {
   display: flex;
   align-items: center;
 }
 
-nav .logo {
-  margin-top: 10px;
-  margin-left: 30px;
-}
 
 .logo:hover, .down-arrow:hover, .social-media img:hover {
   cursor: pointer;
-}
-
-nav a {
-  padding-right: 7px;
 }
 
 .down-arrow {

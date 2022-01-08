@@ -1,48 +1,89 @@
-.container {
-    margin: 0 100px;
+@media (min-width: 960px) {
+    .mobileView{
+        display: none;
+    }
+
+    .container {
+        margin: 0 100px;
+    }
+    
+    .fixture {
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-bottom: 4px solid #023496;
+    }
+    
+    .home, .away {
+        display: grid;
+        align-items: center;
+    }
+    
+    .home > *, .away > * {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    
+    .home h2, .away h2 {
+        color: #fff;
+        font-size: 22px;
+        transform: rotate(-45deg);
+    }
+    
+    .home h2 {
+        margin-bottom: 26px;
+        margin-left: 58px;
+    }
+    
+    .away h2 {
+        margin-bottom: 70px;
+    }
+    
+    .matchDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .matchDetails > * {
+        margin: 0 0 15px;
+    }
 }
 
-.fixture {
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-bottom: 4px solid #023496;
-}
 
-.home, .away {
-    display: grid;
-    align-items: center;
-}
+@media (max-width: 960px) {
+    .desktopView{
+        display: none;
+    }
 
-.home > *, .away > * {
-    grid-column-start: 1;
-    grid-row-start: 1;
-}
 
-.home h2, .away h2 {
-    color: #fff;
-    font-size: 22px;
-    transform: rotate(-45deg);
-}
+    .container {
+        margin: 0 0;
+    }
+    
+    .fixture {
+        border: 1px solid black;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-bottom: 4px solid #023496;
 
-.home h2 {
-    margin-bottom: 26px;
-    margin-left: 58px;
-}
+        padding: 12px;
+    }
 
-.away h2 {
-    margin-bottom: 70px;
-}
+    .home h2, .away h2 {
+        font-size: 20px;
+    }
 
-.matchDetails {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .matchDetails{
+        font-size: small;
 
-.matchDetails > * {
-    margin: 0 0 15px;
+        text-align: center;
+    }
 }

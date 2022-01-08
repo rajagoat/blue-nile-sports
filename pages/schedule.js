@@ -34,7 +34,8 @@ export const getStaticProps = async () => {
 
 const Schedule = ({ matches: { success, data: { fixtures } } }) => {
     return (
-        <div>
+        <>
+        <div className={styles.desktopView}>
             {success && <div className={styles.container}>
                 {fixtures.map(fixture =>
                     <div className={styles.fixture} key={fixture.id}>
@@ -59,6 +60,39 @@ const Schedule = ({ matches: { success, data: { fixtures } } }) => {
                 )}
             </div>}
         </div>
+
+        <div className={styles.mobileView}>
+        {success && <div className={styles.container}>
+            {fixtures.map(fixture =>
+                <div className={styles.fixture} key={fixture.id}>
+                    <div className={styles.home}>
+                        <h2>{fixture.home_name}</h2>
+                    </div>
+                    <div style={{margin:"6px 0 12px 0"}}>
+                    versus
+                    </div>
+                    
+                    <div className={styles.away}>
+                        <h2>{fixture.away_name}</h2>
+                    </div>
+                    <br/>
+                    <div className={styles.matchDetails}>
+                        <h4>{fixture.date}</h4>
+                        <h3>{`${fixture.time} EST`}</h3>
+                        {fixture.location ?
+                            <p>{fixture.location}</p>
+                            :
+                            <p>Not Available</p>
+                        }
+                    </div>
+                </div>
+            )}
+        </div>}
+        </div>
+        </>
+        
+
+        
     );
 }
 
