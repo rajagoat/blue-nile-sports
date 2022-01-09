@@ -9,9 +9,9 @@ function About() {
 
     return (
         <>
-            <Head>
+            {/* <Head>
             <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-            </Head>
+            </Head> */}
             <div className={styles.aboutText}>
                 <h1>{title}</h1>
                 <AboutContent/>
