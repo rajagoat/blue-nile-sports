@@ -2,6 +2,7 @@ import styles from '../styles/Schedule.module.css'
 import homeBackground from '../public/images/static/home.svg'
 import awayBackground from '../public/images/static/away.svg'
 import Image from 'next/image';
+import Head from 'next/head';
 
 export const getStaticProps = async () => {
     const fixturesAPIp1 = 'https://livescore-api.com/api-client/fixtures/matches.json?&key=gHEJyJ4QGSqIuUPX&secret=8ksmR4idpMVsioSz6xiEhnvXfWGKRvHZ&competition_id=227';
@@ -35,6 +36,9 @@ export const getStaticProps = async () => {
 const Schedule = ({ matches: { success, data: { fixtures } } }) => {
     return (
         <>
+        <Head>
+                <title>Schedule</title>
+        </Head>
         <div className={styles.desktopView}>
             {success && <div className={styles.container}>
                 {fixtures.map(fixture =>

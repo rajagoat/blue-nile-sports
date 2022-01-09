@@ -15,6 +15,10 @@ export const getStaticProps = async () => {
 
 export default function Home({ imageArticles }) {
   return (
+    <>
+    <Head>
+      <title>Home</title>
+    </Head>
     <div className={styles.page}>
       <div className={styles.slider}>
         {imageArticles && imageArticles.map(article =>
@@ -42,5 +46,7 @@ export default function Home({ imageArticles }) {
       </div>
       
     </div>
+    </>
+    
   )
 }

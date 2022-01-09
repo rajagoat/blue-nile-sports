@@ -2,6 +2,7 @@ import Image from 'next/image'
 import ArticleSnippet from '../../components/ArticleSnippet'
 import articles from '../../public/data/articles.json'
 import styles from '../../styles/ArticleDetails.module.css'
+import Head from 'next/head';
 
 export const getStaticPaths = async () => {
     return {
@@ -22,6 +23,9 @@ export const getStaticProps = async (context) => {
 const Details = ({ article: { thumbnail, title, author, dateFormatted, bodyHtml }, otherArticles }) => {
     return (
         <>
+            <Head>
+                <title>Articles |{' '}{title}</title>
+            </Head>
             <div className={styles.desktopView}>
             <div className={styles.page}>
                 {thumbnail &&

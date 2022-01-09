@@ -1,10 +1,14 @@
 import ArticleSnippet from '../../components/ArticleSnippet';
 import articles from '../../public/data/articles.json'
 import styles from '../../styles/Articles.module.css'
+import Head from 'next/head';
 
 const Articles = () => {
     return (
         <div>
+            <Head>
+                <title>Articles</title>
+            </Head>
             {/* <h1 className={styles.title}>- Latest in Football -</h1> */}
             <div className={styles.articlesWrapper}>
             {articles && articles.map(article =>
