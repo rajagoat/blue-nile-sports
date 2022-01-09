@@ -29,7 +29,7 @@ export default function Home({ imageArticles }) {
           </Link>
         )}
       </div>
-      <h1 className={styles.header}>- Latest -</h1>
+      {/* <h1 className={styles.header}>- Latest -</h1> */}
       <div className={styles.flexContainer}>
         <div className={styles.articleContainer}>
           {articles && articles.map(article =>
