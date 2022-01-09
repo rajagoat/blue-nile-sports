@@ -1,4 +1,10 @@
 ---
 title: About
 ---
-What's up homie
+What we are about..
+
+
+
+## Mission Statement
+
+Lorem Ipsum Dolor
