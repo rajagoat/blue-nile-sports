@@ -68,7 +68,7 @@
     
     .content img {
         position: relative;
-        margin: 12px 5%;
+        margin: 16px 5%;
         max-width: 90%;
     }
     
@@ -175,6 +175,7 @@
     
     .content img {
         width: 100%;
+        margin: 16px 0;
     }
     
     .content blockquote {
