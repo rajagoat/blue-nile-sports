@@ -192,7 +192,7 @@
     }
     
     .articleContainer {
-        margin-bottom: 50px;
+        padding-bottom: 50px;
 
         display: flex;
         flex-flow: column nowrap;
