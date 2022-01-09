@@ -91,7 +91,9 @@ const NavigationBar = () => {
   <Navbar bg="dark" variant="dark" expand="lg" className="navigate">
   <Container>
   <Navbar.Brand href="#home">
-            <Image  src={logo} alt="Blue Nile Sport Logo" height={logoSize.height} width={logoSize.width} />
+      <a href={'/'}>
+      <Image src={logo} alt="Blue Nile Sport Logo" height={logoSize.height} width={logoSize.width} />
+      </a>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

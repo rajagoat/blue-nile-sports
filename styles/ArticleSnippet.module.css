@@ -1,3 +1,5 @@
+@media (max-width: 1px) {
+    
 .box {
     border: 1px solid black;
     background-color: white;
@@ -5,9 +7,10 @@
     justify-content: space-between;
     max-width: 800px;
     width: 80vw;
-    margin-left: 30px;
-    margin-bottom: 20px;
     border-left: 6px solid #023496;
+
+    margin: 16px 0;
+    height: 140px;
 }
 
 .box:hover {
@@ -18,23 +21,55 @@
 
 .mediaContent, .mediaContentNoThumb {
     margin-left: 20px;
-    max-width: 70%;
-}
-
-.mediaContentNoThumb {
-    max-width: 95%;
 }
 
 .mediaTitle {
-    margin-bottom: 10px;
+    margin-bottom: -1px;
+    margin-top: 12px;
 }
 
 .mediaAuthor, .mediaDate {
     font-weight: 200;
+    margin-bottom: 24px;
 }
 
 .mediaDate {
     font-style: italic;
+}
+
+}
+
+@media (min-width: 1px) {
+    .box {
+        border: 1px solid black;
+        background-color: white;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        max-width: 800px;
+        width: 80vw;
+        border-left: 6px solid #023496;
+    
+        margin: 16px 0;
+    }
+
+    .mediaTitle {
+        margin-bottom: -1px;
+        margin-top: 12px;
+    }
+    
+    .mediaAuthor, .mediaDate {
+        font-weight: 200;
+        margin-bottom: 24px;
+    }
+    
+    .mediaDate {
+        font-style: italic;
+    }
+
+    .mediaContent, .mediaContentNoThumb {
+        margin-left: 20px;
+    }
 }
 
 .image {
