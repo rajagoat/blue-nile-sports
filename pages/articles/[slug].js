@@ -25,6 +25,12 @@ const Details = ({ article: { thumbnail, title, author, dateFormatted, bodyHtml 
         <>
             <Head>
                 <title>Articles |{' '}{title}</title>
+                {thumbnail && <link rel="icon" type="image/png" sizes="32x32" href={thumbnail}/> }
+                {thumbnail && <link rel="icon" type="image/png" sizes="16x16" href={thumbnail} /> }
+                {thumbnail && <link rel="apple-touch-icon" sizes="180x180" href={thumbnail} /> }
+                <link rel="manifest" href="/site.webmanifest" />
+                <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000" />
+                <meta name="theme-color" content="#000" />
             </Head>
             <div className={styles.desktopView}>
             <div className={styles.page}>

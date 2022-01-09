@@ -172,7 +172,8 @@
     }
     
     .content img {
-        width: 100%;
+        max-width: 100%;
+        align-self: center;
     }
     
     .content blockquote {
