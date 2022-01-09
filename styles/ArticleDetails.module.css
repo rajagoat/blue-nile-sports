@@ -35,6 +35,7 @@
         position: sticky;
         top: 500px;
         margin-bottom: 30px;
+        margin-top: -200px;
     }
     
     .headlineContainer {
@@ -87,6 +88,12 @@
     
     .articleContainer {
         margin-bottom: 50px;
+
+        display: flex;
+        flex-flow: column nowrap;
+
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -180,12 +187,18 @@
         font-style: italic;
     }
     
-    .header, .articleContainer {
+    .header {
         margin-left: 50px;
     }
     
     .articleContainer {
         margin-bottom: 50px;
+
+        display: flex;
+        flex-flow: column nowrap;
+
+        justify-content: center;
+        align-items: center;
     }
 }
 
