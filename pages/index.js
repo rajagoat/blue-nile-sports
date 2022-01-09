@@ -24,7 +24,6 @@ export default function Home({ imageArticles }) {
               <div className={styles.fadeBox} />
               <div className={styles.featuredText}>
                 <h1 className={styles.featuredTitle}>{article.title}</h1>
-                <p>Read More {'>'}{'>'}{'>'}</p>
               </div>
             </div>
           </Link>

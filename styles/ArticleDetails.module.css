@@ -1,84 +1,191 @@
-.page, .moreDetails {
-    background-color: #EDEDED;
+@media (min-width: 801px) {
+    .mobileView{
+        display: none;
+    }
+
+    .page, .moreDetails {
+        background-color: #EDEDED;
+    }
+    
+    .page {
+        display: grid;
+        place-items: center;
+    }
+    
+    .imageContainer {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 700px;
+        z-index: 0;
+
+ 
+    }
+    
+    .image {
+        object-fit: cover;
+    }
+    
+    .details {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        z-index: 1;
+        position: sticky;
+        top: 500px;
+        margin-bottom: 30px;
+    }
+    
+    .headlineContainer {
+        text-align: center;
+    }
+    
+    .title {
+        font-size: 50px;
+        font-weight: 600;
+        margin: 50px 0 5px;
+    }
+    
+    .author, .dateFormatted {
+        font-size: 22px;
+        color: #023496;
+    }
+    
+    .author {
+        font-weight: 500;
+    }
+    
+    .dateFormatted {
+        font-style: italic;
+    }
+    
+    .content {
+        font-size: 20px;
+        margin: 20px 50px;
+    }
+    
+    .content img {
+        width: 100%;
+    }
+    
+    .content blockquote {
+        text-align: center;
+        font-weight: 200;
+        font-style: italic;
+        position: relative;
+        top: -20px;
+    }
+    
+    .header {
+        font-style: italic;
+    }
+    
+    .header, .articleContainer {
+        margin-left: 50px;
+    }
+    
+    .articleContainer {
+        margin-bottom: 50px;
+    }
 }
 
-.page {
-    display: grid;
-    place-items: center;
+@media (max-width: 800px) {
+
+    .desktopView{
+        display: none;
+    }
+
+
+    .page, .moreDetails {
+        background-color: #EDEDED;
+    }
+    
+    .page {
+        display: grid;
+        place-items: center;
+    }
+    
+    .imageContainer {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 700px;
+        z-index: 0;
+
+        height: 300px;
+        width: 95%;
+
+        margin: 16px 0;
+
+        align-self: center;
+    }
+    
+    .image {
+        object-fit: cover;
+    }
+    
+    .details {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        z-index: 1;
+        position: sticky;
+        top: 500px;
+        margin-bottom: 30px;
+    }
+    
+    .headlineContainer {
+        text-align: center;
+    }
+    
+    .title {
+        font-size: 50px;
+        font-weight: 600;
+        margin: 50px 0 5px;
+    }
+    
+    .author, .dateFormatted {
+        font-size: 22px;
+        color: #023496;
+    }
+    
+    .author {
+        font-weight: 500;
+    }
+    
+    .dateFormatted {
+        font-style: italic;
+    }
+    
+    .content {
+        font-size: 20px;
+        margin: 20px 50px;
+    }
+    
+    .content img {
+        width: 100%;
+    }
+    
+    .content blockquote {
+        text-align: center;
+        font-weight: 200;
+        font-style: italic;
+        position: relative;
+        top: -20px;
+    }
+    
+    .header {
+        font-style: italic;
+    }
+    
+    .header, .articleContainer {
+        margin-left: 50px;
+    }
+    
+    .articleContainer {
+        margin-bottom: 50px;
+    }
 }
 
-.imageContainer {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 700px;
-    z-index: 0;
-}
-
-.image {
-    object-fit: cover;
-}
-
-.details {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    z-index: 1;
-    border-radius: 5px;
-    position: sticky;
-    top: 500px;
-    margin-bottom: 30px;
-}
-
-.headlineContainer {
-    text-align: center;
-}
-
-.title {
-    font-size: 50px;
-    font-weight: 600;
-    margin: 50px 0 5px;
-}
-
-.author, .dateFormatted {
-    font-size: 22px;
-    color: #023496;
-}
-
-.author {
-    font-weight: 500;
-}
-
-.dateFormatted {
-    font-style: italic;
-}
-
-.content {
-    font-size: 20px;
-    margin: 20px 50px;
-}
-
-.content img {
-    width: 100%;
-}
-
-.content blockquote {
-    text-align: center;
-    font-weight: 200;
-    font-style: italic;
-    position: relative;
-    top: -20px;
-}
-
-.header {
-    font-style: italic;
-}
-
-.header, .articleContainer {
-    margin-left: 50px;
-}
-
-.articleContainer {
-    margin-bottom: 50px;
-}
