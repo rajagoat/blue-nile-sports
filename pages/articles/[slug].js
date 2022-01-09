@@ -28,9 +28,18 @@ const Details = ({ article: { thumbnail, title, author, dateFormatted, bodyHtml 
                 {thumbnail && <link rel="icon" type="image/png" sizes="32x32" href={thumbnail}/> }
                 {thumbnail && <link rel="icon" type="image/png" sizes="16x16" href={thumbnail} /> }
                 {thumbnail && <link rel="apple-touch-icon" sizes="180x180" href={thumbnail} /> }
+                {!thumbnail && <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/> }
+                {!thumbnail && <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> }
+                {!thumbnail && <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> }
                 <link rel="manifest" href="/site.webmanifest" />
                 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000" />
                 <meta name="theme-color" content="#000" />
+
+                <meta name="description" content="Blue Nile Sport is a newly launched platform for Ethiopian sporting news, commentary, analysis and updates with a heightened focus on football."></meta>
+                <meta property="og:title" content={title}/>
+                <meta property="og:description" content="Blue Nile Sport is a newly launched platform for Ethiopian sporting news."></meta>
+                {thumbnail && <meta property="og:image" content={thumbnail}></meta> }
+                {!thumbnail && <meta property="og:image" content="/android-chrome-96x96.png"></meta> }
             </Head>
             <div className={styles.desktopView}>
             <div className={styles.page}>
