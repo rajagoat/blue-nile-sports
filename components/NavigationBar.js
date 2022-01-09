@@ -70,7 +70,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import logo from '../public/icons/logo.svg'
+import logo from '../public/icons/logo.png'
 // import downArrowIcon from '../public/icons/down_arrow.svg'
 // import instagramIcon from '../public/icons/instagram.svg'
 // import twitterIcon from '../public/icons/twitter.svg'
