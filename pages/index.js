@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
 export default function Home({ imageArticles }) {
   return (
     <>
-    <Head>
+      <Head>
         <title>Home</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -29,36 +29,36 @@ export default function Home({ imageArticles }) {
         <meta property="og:title" content="Blue Nile Sport." />
         <meta property="og:description" content="Blue Nile Sport is a newly launched platform for Ethiopian sporting news."></meta>
         <meta property="og:image" content="/android-chrome-96x96.png"></meta>
-    </Head>
+      </Head>
 
-    <div className={styles.page}>
-      <div className={styles.slider}>
-        {imageArticles && imageArticles.map(article =>
-          <Link href={`/articles/${article.slug}`} passHref key={article.slug}>
-            <div className={styles.featuredContainer}>
-              <Image className={styles.featuredImage} src={article.thumbnail} alt='' layout='fill' priority />
-              <div className={styles.fadeBox} />
-              <div className={styles.featuredText}>
-                <h1 className={styles.featuredTitle}>{article.title}</h1>
+      <div className={styles.page}>
+        <div className={styles.slider}>
+          {imageArticles && imageArticles.map(article =>
+            <Link href={`/articles/${article.slug}`} passHref key={article.slug}>
+              <div className={styles.featuredContainer}>
+                <Image className={styles.featuredImage} src={article.thumbnail} alt='' layout='fill' priority />
+                <div className={styles.fadeBox} />
+                <div className={styles.featuredText}>
+                  <h1 className={styles.featuredTitle}>{article.title}</h1>
+                </div>
               </div>
-            </div>
-          </Link>
-        )}
-      </div>
-      {/* <h1 className={styles.header}>- Latest -</h1> */}
-      <div className={styles.flexContainer}>
-        <div className={styles.articleContainer}>
-          {articles && articles.map(article =>
-            <ArticleSnippet article={article} key={article.slug}/>  
+            </Link>
           )}
         </div>
-        <div className={styles.timelineWrapper}>
-          <a className="twitter-timeline" data-width="250" data-height="400" data-theme="dark" href="https://twitter.com/BlueNileSport">Reload to view</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {/* <h1 className={styles.header}>- Latest -</h1> */}
+        <div className={styles.flexContainer}>
+          <div className={styles.articleContainer}>
+            {articles && articles.slice(0, 10).map(article =>
+              <ArticleSnippet article={article} key={article.slug} />
+            )}
+          </div>
+          <div className={styles.timelineWrapper}>
+            <a className="twitter-timeline" data-width="250" data-height="400" data-theme="dark" href="https://twitter.com/BlueNileSport">Reload to view</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
         </div>
+
       </div>
-      
-    </div>
     </>
-    
+
   )
 }

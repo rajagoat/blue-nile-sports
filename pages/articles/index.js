@@ -2,8 +2,20 @@ import ArticleSnippet from '../../components/ArticleSnippet';
 import articles from '../../public/data/articles.json'
 import styles from '../../styles/Articles.module.css'
 import Head from 'next/head';
+import { useState } from 'react';
 
 const Articles = () => {
+    const [page, setPage] = useState(1);
+    const pageArticles = articles.slice((page - 1) * 10, (page * 10));
+
+    const handleClick = e => {
+        if (e.target.outerText === "Previous")
+            setPage(page - 1);
+        if (e.target.outerText === "Next")
+            setPage(page + 1);
+        window.scrollTo(0, 0);
+    };
+
     return (
         <div>
             <Head>
@@ -22,9 +34,14 @@ const Articles = () => {
             </Head>
             {/* <h1 className={styles.title}>- Latest in Football -</h1> */}
             <div className={styles.articlesWrapper}>
-            {articles && articles.map(article =>
+            {pageArticles && pageArticles.map(article =>
                 <ArticleSnippet article={article} key={article.slug} />
             )}
+            </div>
+            <h4 className={styles.pages}>Displaying results for articles {(page - 1) * 10 + 1} to {page * 10}</h4>
+            <div className={styles.pages}>
+                {page > 1 && <button onClick={handleClick}>Previous</button>}
+                {page < articles.length / 10 && <button onClick={handleClick}>Next</button>}
             </div>
         </div>
     );

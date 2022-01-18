@@ -12,9 +12,8 @@
         max-width: 800px;
         width: 80vw;
         border-left: 6px solid #023496;
-
         margin: 16px 0;
-        height: 140px;
+        height: 160px;
     }
 
     .box:hover {
