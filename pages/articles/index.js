@@ -9,9 +9,9 @@ const Articles = () => {
     const pageArticles = articles.slice((page - 1) * 10, (page * 10));
 
     const handleClick = e => {
-        if (e.target.outerText === "Previous")
+        if (e.target.name === "Previous")
             setPage(page - 1);
-        if (e.target.outerText === "Next")
+        if (e.target.name === "Next")
             setPage(page + 1);
         window.scrollTo(0, 0);
     };
@@ -38,10 +38,10 @@ const Articles = () => {
                 <ArticleSnippet article={article} key={article.slug} />
             )}
             </div>
-            <h4 className={styles.pages}>Displaying results for articles {(page - 1) * 10 + 1} to {page * 10}</h4>
+            <h4 className={styles.pages}>Displaying results for articles {(page - 1) * 10 + 1} to {page < articles.length / 10 ? page * 10 : articles.length}</h4>
             <div className={styles.pages}>
-                {page > 1 && <button onClick={handleClick}>Previous</button>}
-                {page < articles.length / 10 && <button onClick={handleClick}>Next</button>}
+                {page > 1 && <button name='Previous' onClick={handleClick}>Previous</button>}
+                {page < articles.length / 10 && <button name='Next' onClick={handleClick}>Next</button>}
             </div>
         </div>
     );
