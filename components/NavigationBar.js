@@ -100,7 +100,7 @@ const NavigationBar = () => {
       <Nav className="me-auto">
         <Nav.Link className="navigate-item" href={'/'}>Home</Nav.Link>
         <Nav.Link className="navigate-item" href={"/articles"}>Articles</Nav.Link>
-        <Nav.Link className="navigate-item" href={"/schedule"}>Schedule</Nav.Link>
+        {/* <Nav.Link className="navigate-item" href={"/schedule"}>Schedule</Nav.Link> */}
         <Nav.Link className="navigate-item" href={"/about"}>About</Nav.Link>
       </Nav>
     </Navbar.Collapse>
